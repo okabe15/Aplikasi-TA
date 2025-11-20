@@ -166,6 +166,7 @@ async def create_module(
                     id=ex_data.get('id', str(uuid.uuid4())),
                     module=module,
                     type=ex_data.get('type', 'multiple_choice'),
+                    difficulty=ex_data.get('difficulty', 'medium'),  # ✅ ADD
                     question=ex_data.get('question', ''),
                     classic_text=ex_data.get('classic_text'),
                     modern_text=ex_data.get('modern_text'),
@@ -832,6 +833,7 @@ async def save_module_with_exercises(
                     id=ex_data.get('id', str(uuid.uuid4())),
                     module=module,
                     type=ex_data.get('type', 'grammar'),
+                    difficulty=ex_data.get('difficulty', 'medium'),  # ✅ ADD
                     question=ex_data['question'],
                     classic_text=ex_data.get('classic_text'),
                     modern_text=ex_data.get('modern_text'),

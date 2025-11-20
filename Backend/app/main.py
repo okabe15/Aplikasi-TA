@@ -1,6 +1,6 @@
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
-from app.routers import modules, training, auth, user_management, Reports, leaderboard, progress
+from app.routers import modules, training, auth, user_management, Reports, leaderboard
 import logging
 
 # Setup logging
@@ -22,10 +22,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "http://localhost:3001",  # Added for current frontend port
         "http://localhost:5173",
         "http://127.0.0.1:3000",
-        "http://127.0.0.1:3001",  # Added for current frontend port
         "http://127.0.0.1:5173",
     ],
     allow_credentials=True,
@@ -41,8 +39,6 @@ app.include_router(training.router)
 app.include_router(user_management.router)
 app.include_router(Reports.router)
 app.include_router(leaderboard.router)
-app.include_router(progress.router, prefix="/api")
-
 
 logger.info("✅ All routers registered")
 

@@ -59,6 +59,7 @@ class Exercise(db.Entity):
     id = PrimaryKey(str)
     module = Required(LearningModule)
     type = Required(str)
+    difficulty = Required(str, default='medium')  # 'beginner', 'medium', 'advanced'
     question = Required(str)
     classic_text = Optional(str, nullable=True)
     modern_text = Optional(str, nullable=True)
@@ -70,7 +71,7 @@ class Exercise(db.Entity):
     explanation = Required(str)
     grammar_rule = Optional(str, nullable=True)
     created_at = Required(datetime, default=datetime.now)
-    
+
     user_answers = Set('UserAnswer')
 
 class UserProgress(db.Entity):

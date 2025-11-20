@@ -136,6 +136,8 @@ class DatabaseService:
                     'mood': p.mood or "",
                     'composition': p.composition or "",
                     'image_base64': p.image_base64 if p.image_base64 else None,
+                    'dialogue_audio_base64': p.dialogue_audio_base64 if p.dialogue_audio_base64 else None,
+                    'narration_audio_base64': p.narration_audio_base64 if p.narration_audio_base64 else None,
                     'created_at': p.created_at.isoformat() if p.created_at else ""
                 })
             
@@ -145,6 +147,7 @@ class DatabaseService:
                 exercises.append({
                     'id': e.id,
                     'type': e.type or "multiple_choice",
+                    'difficulty': e.difficulty or "medium",  # ✅ ADD
                     'question': e.question or "",
                     'classic_text': e.classic_text if e.classic_text else None,
                     'modern_text': e.modern_text if e.modern_text else None,
@@ -160,11 +163,14 @@ class DatabaseService:
             
             return {
                 'id': module.id,
+                'module_name': module.module_name or f"Module {module.id.replace('module_', '')}",
                 'classic_text': module.classic_text or "",
                 'modern_text': module.modern_text or "",
                 'comic_script': module.comic_script or "",
                 'panels': panels,
+                'panel_count': len(panels),
                 'exercises': exercises,
+                'exercise_count': len(exercises),
                 'created_at': module.created_at.isoformat(),
                 'updated_at': module.updated_at.isoformat()
             }
