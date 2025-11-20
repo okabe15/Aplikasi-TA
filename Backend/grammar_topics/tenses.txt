@@ -1,0 +1,66 @@
+### OVERVIEW ###
+This document provides archetypes for creating varied and engaging tense-based questions. Each question must be adapted to the comic's specific dialogue, narration, and context.
+
+---
+
+### ARCHETYPE 1: Fill in the Blank (Verb Form) ###
+Instruction for AI: Create a multiple-choice question where the user must select the correct verb form to complete a sentence from the comic. The options should include plausible but incorrect tense forms.
+
+Example format:
+Question: "In Panel 3, when the character says, 'Yesterday, I ______ to the market,' what is the correct verb form?"
+Options: ["go", "have gone", "went", "am going"]
+Correct: 2
+Explanation: "The sentence mentions 'Yesterday,' which is a specific time in the past. Therefore, the Simple Past Tense ('went') is required."
+GrammarRule: "Simple Past Tense"
+
+---
+
+### ARCHETYPE 2: Tense Transformation ###
+Instruction for AI: Take a direct quote from the comic and ask the user to change its tense. This is excellent for comparing classic and modern text.
+
+Example format:
+Question: "The classic text says, 'He maketh his choice.' If this were happening right now, continuously, how would you say it in modern English?"
+ClassicText: "He maketh his choice."
+ModernText: "He is making his choice."
+Options: ["He makes his choice.", "He is making his choice.", "He has made his choice.", "He will make his choice."]
+Correct: 1
+Explanation: "To describe an action happening continuously in the present, we use the Present Continuous Tense (am/is/are + verb-ing)."
+GrammarRule: "Present Continuous Tense"
+
+---
+
+### ARCHETYPE 3: Identifying the Correct Tense for a Situation ###
+Instruction for AI: Describe a situation from a comic panel and ask which tense best describes it. This tests the user's understanding of tense *usage* and *meaning*.
+
+Example format:
+Question: "In Panel 5, we see the character has just finished building a machine, and the parts are still warm. Which sentence best describes this completed action with a present result?"
+ComicReference: "Panel 5: Character wipes sweat from his brow, looking at a finished machine."
+Options: ["He was building the machine.", "He builds the machine.", "He has just built the machine.", "He will build the machine."]
+Correct: 2
+Explanation: "The Present Perfect Tense ('has built') is used to describe a past action that has a direct effect or result in the present."
+GrammarRule: "Present Perfect Tense"
+
+---
+
+### ARCHETYPE 4: Error Identification ###
+Instruction for AI: Create a sentence based on the comic's context but with a deliberate tense error. The user must identify the incorrect part of the sentence.
+
+Example format:
+Question: "Based on the story, which part of the following sentence is grammatically incorrect? 'Tomorrow, the hero has fought the dragon and saved the village.'"
+Options: ["Tomorrow", "has fought", "the dragon", "saved"]
+Correct: 1
+Explanation: "The sentence refers to a future event ('Tomorrow'), so the Present Perfect Tense ('has fought') is incorrect. The Future Tense ('will fight' or 'is going to fight') should be used."
+GrammarRule: "Future Tense vs. Other Tenses"
+
+---
+
+### ARCHETYPE 5: Nuance and Meaning ###
+Instruction for AI: Create a question that asks about the subtle difference in meaning between two tense options, based on the comic's context.
+
+Example format:
+Question: "In Panel 2, the narration says, 'For years, he had practiced his swordsmanship.' What does the use of Past Perfect ('had practiced') imply?"
+ComicReference: "Panel 2: Narration box over a flashback scene."
+Options: ["That he is practicing now.", "That his practice happened before another past event in the story.", "That he will practice in the future.", "That his practice is a general habit."]
+Correct: 1
+Explanation: "The Past Perfect Tense ('had practiced') is used to indicate an action that was completed before another point in the past."
+GrammarRule: "Past Perfect Tense"

@@ -1,0 +1,174 @@
+# English Grammar in Use — Advanced Tense Recognition and Classification Practice
+
+====================================================
+## Section G — Identify the Tense Used
+
+1. Identify the tense in the following sentence:
+   "She has been studying English for two years."
+   A. Present Simple  
+   B. Present Continuous  
+   C. Present Perfect Continuous  
+   D. Past Continuous  
+   **Answer: C**
+
+2. What tense is used in the sentence below?
+   "They had already eaten when we arrived."
+   A. Past Perfect  
+   B. Present Perfect  
+   C. Past Simple  
+   D. Past Continuous  
+   **Answer: A**
+
+3. "I will be working when you arrive."
+   A. Future Simple  
+   B. Future Continuous  
+   C. Present Continuous  
+   D. Future Perfect  
+   **Answer: B**
+
+4. Identify the tense: "I have just finished my homework."
+   A. Present Perfect  
+   B. Past Simple  
+   C. Present Continuous  
+   D. Present Perfect Continuous  
+   **Answer: A**
+
+====================================================
+## Section H — Choose the Correct Example of a Tense
+
+5. Which sentence is in the **past perfect** tense?
+   A. He had visited Paris before the war.  
+   B. He visited Paris last year.  
+   C. He was visiting Paris last year.  
+   D. He has visited Paris twice.  
+   **Answer: A**
+
+6. Which of the following is **present continuous**?
+   A. She works hard every day.  
+   B. She is working on a new project.  
+   C. She has worked here since 2015.  
+   D. She was working late yesterday.  
+   **Answer: B**
+
+7. Choose the sentence written in **future perfect** tense.
+   A. By next month, we will have completed the report.  
+   B. We will complete the report soon.  
+   C. We are completing the report this week.  
+   D. We completed the report last week.  
+   **Answer: A**
+
+====================================================
+## Section I — Transformation (Change the Tense)
+
+8. Change the following sentence to **past simple**:
+   "She writes letters to her family every week."
+   A. She wrote letters to her family every week.  
+   B. She was writing letters to her family every week.  
+   C. She has written letters to her family every week.  
+   D. She is writing letters to her family every week.  
+   **Answer: A**
+
+9. Change to **future continuous**:
+   "I play football on Sundays."
+   A. I will be playing football on Sundays.  
+   B. I will play football on Sundays.  
+   C. I am playing football on Sundays.  
+   D. I played football on Sundays.  
+   **Answer: A**
+
+10. Change to **present perfect**:
+    "They eat breakfast at 7 a.m."
+    A. They are eating breakfast at 7 a.m.  
+    B. They have eaten breakfast.  
+    C. They ate breakfast.  
+    D. They were eating breakfast.  
+    **Answer: B**
+
+====================================================
+## Section J — Contextual Logic (Time Expressions)
+
+11. Which tense best fits the context?
+    "It’s 8:00 p.m. now. I _______ dinner at 7:00."
+    A. have eaten  
+    B. had eaten  
+    C. eat  
+    D. will eat  
+    **Answer: B**
+
+12. "Don’t call her now — she _______ a meeting."
+    A. has  
+    B. is having  
+    C. had  
+    D. will have  
+    **Answer: B**
+
+13. "By the time you get home, I _______ my homework."
+    A. will finish  
+    B. have finished  
+    C. will have finished  
+    D. am finishing  
+    **Answer: C**
+
+====================================================
+## Section K — Error Recognition
+
+14. Which sentence contains an error in tense use?
+    A. She has gone to the store yesterday.  
+    B. She went to the store yesterday.  
+    C. She has gone to the store.  
+    D. She is going to the store now.  
+    **Answer: A**
+
+15. Choose the incorrect sentence:
+    A. I am knowing the answer.  
+    B. I know the answer.  
+    C. I have known the answer since yesterday.  
+    D. I knew the answer immediately.  
+    **Answer: A**
+
+====================================================
+## Section L — Timeline Logic / Sequence
+
+16. Which happened first?
+    "I had eaten dinner before he arrived."
+    A. I ate dinner first.  
+    B. He arrived first.  
+    C. Both at the same time.  
+    D. Not enough information.  
+    **Answer: A**
+
+17. Which tense shows an action **still happening now**?
+    A. Present Continuous  
+    B. Present Perfect  
+    C. Present Perfect Continuous  
+    D. Past Continuous  
+    **Answer: C**
+
+18. Which tense expresses a **completed action affecting the present**?
+    A. Past Simple  
+    B. Present Perfect  
+    C. Past Perfect  
+    D. Present Continuous  
+    **Answer: B**
+
+====================================================
+## Section M — Challenge Mix
+
+19. Select the pair of sentences showing **the same time relationship**:
+    A. I have lived here for ten years. / I started living here ten years ago.  
+    B. I lived here for ten years. / I have just moved in.  
+    C. I was living here for ten years. / I have lived here since last week.  
+    D. I had lived here for ten years. / I’m still living here now.  
+    **Answer: A**
+
+20. Which tense correctly completes this dialogue?
+    A: “Do you know where Sarah is?”  
+    B: “Yes, she _______ to the store.”  
+    A. went  
+    B. has gone  
+    C. goes  
+    D. is going  
+    **Answer: B**
+
+====================================================
+## END OF TENSES VARIATION SET
