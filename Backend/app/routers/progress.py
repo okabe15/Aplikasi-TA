@@ -1,9 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import JSONResponse
 from fastapi.security import OAuth2PasswordBearer
 from typing import List, Optional
 from datetime import datetime
 from pony.orm import db_session, desc, select, count, commit
 import logging
+import json
 
 from app.routers.auth import get_current_user_from_token
 from app.database.models import LearningModule, User, ComicPanel, Exercise, UserProgress, UserAnswer
@@ -181,7 +183,7 @@ async def get_all_student_progress(
             student['rank'] = rank
         
         logger.info(f"✅ Returning {len(students_progress)} students")
-        
+
         response = {
             'students': students_progress,
             'total_students': len(students_progress),
@@ -191,8 +193,18 @@ async def get_all_student_progress(
                 if students_progress else 0, 1
             )
         }
-        
-        return response
+
+        logger.info(f"📤 Response object keys: {list(response.keys())}")
+        logger.info(f"📤 Response['students'] length: {len(response['students'])}")
+
+        # Test JSON serialization
+        import json as json_module
+        json_str = json_module.dumps(response)
+        logger.info(f"📤 JSON length: {len(json_str)} chars")
+        logger.info(f"📤 JSON preview: {json_str[:200]}...")
+
+        # Use JSONResponse to ensure proper serialization
+        return JSONResponse(content=response)
         
     except Exception as e:
         logger.error(f"Failed to get all student progress: {e}", exc_info=True)

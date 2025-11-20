@@ -30,6 +30,15 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => {
     console.log('✅ API Response:', response.config.url, response.status);
+
+    // Debug logging for progress endpoint
+    if (response.config.url.includes('/progress/all-students')) {
+      console.log('🔍 DEBUG response.data type:', typeof response.data);
+      console.log('🔍 DEBUG response.data is Array?:', Array.isArray(response.data));
+      console.log('🔍 DEBUG response.data keys:', response.data ? Object.keys(response.data) : 'null');
+      console.log('🔍 DEBUG response.data:', response.data);
+    }
+
     return response;
   },
   (error) => {
