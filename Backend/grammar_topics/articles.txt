@@ -1,0 +1,65 @@
+### OVERVIEW ###
+This document provides archetypes for creating engaging questions about articles (a, an, the). Questions should be adapted to the comic's dialogue, narration, and visual context.
+
+---
+
+### ARCHETYPE 1: Fill in the Blank (Article Selection) ###
+Instruction for AI: Create a multiple-choice question where the user must select the correct article to complete a sentence from the comic.
+
+Example format:
+Question: "In Panel 2, the character says, 'I saw ___ strange object in the sky.' Which article is correct?"
+Options: ["a", "an", "the", "no article needed"]
+Correct: 0
+Explanation: "We use 'a' before consonant sounds. 'Strange' begins with 's', a consonant sound. This is also the first mention of the object, so we use the indefinite article."
+GrammarRule: "Indefinite Article - First Mention"
+
+---
+
+### ARCHETYPE 2: Definite vs Indefinite Article ###
+Instruction for AI: Test understanding of when to use 'the' (definite) vs 'a/an' (indefinite) based on comic context.
+
+Example format:
+Question: "The narration says, 'He entered ___ castle he had seen from afar.' Why do we use 'the' castle instead of 'a' castle?"
+ComicReference: "Panel 4: Character approaching a castle mentioned earlier"
+Options: ["Because it's the only castle", "Because the castle was mentioned or known before", "Because castle starts with 'c'", "Because it's a big castle"]
+Correct: 1
+Explanation: "We use 'the' when referring to something already mentioned or known to both speaker and listener. The castle was 'seen from afar' earlier, making it specific and known."
+GrammarRule: "Definite Article - Known Reference"
+
+---
+
+### ARCHETYPE 3: 'A' vs 'An' Based on Sound ###
+Instruction for AI: Create questions testing 'a' vs 'an' based on the sound (not spelling) of the following word.
+
+Example format:
+Question: "In the classic text, it says 'an honourable man.' Why is 'an' used instead of 'a' before 'honourable'?"
+ClassicText: "He was an honourable man"
+ModernText: "He was an honorable man"
+Options: ["Because 'honourable' starts with a vowel letter", "Because the 'h' is silent, making it start with a vowel sound", "Because it's an old-fashioned word", "Because it's a formal word"]
+Correct: 1
+Explanation: "We use 'an' before words that START WITH A VOWEL SOUND, not just vowel letters. In 'honourable,' the 'h' is often silent, so it sounds like 'onourable,' starting with a vowel sound."
+GrammarRule: "A/An - Based on Sound, Not Spelling"
+
+---
+
+### ARCHETYPE 4: Zero Article (No Article Needed) ###
+Instruction for AI: Test when NO article is needed (general plurals, abstract nouns, proper nouns).
+
+Example format:
+Question: "The character says, '___ wisdom comes with experience.' Which article should fill the blank?"
+Options: ["a", "an", "the", "no article needed"]
+Correct: 3
+Explanation: "Abstract nouns like 'wisdom' used in a general sense do not need an article. We're talking about wisdom in general, not a specific type of wisdom."
+GrammarRule: "Zero Article - Abstract Nouns"
+
+---
+
+### ARCHETYPE 5: Error Identification ###
+Instruction for AI: Present a sentence from the comic with an article error. User must identify and correct it.
+
+Example format:
+Question: "Find the article error in this sentence from the story: 'The hero fought a dragon and saved a village from destruction.' What should be corrected?"
+Options: ["Change 'The hero' to 'A hero'", "Change 'a dragon' to 'the dragon'", "No error - the sentence is correct", "Change 'a village' to 'the village'"]
+Correct: 2
+Explanation: "The sentence is correct. 'The hero' uses 'the' because we know which hero. 'A dragon' uses 'a' because it's the first mention. If this dragon was mentioned before, we'd use 'the dragon.'"
+GrammarRule: "Article Usage - Context Matters"

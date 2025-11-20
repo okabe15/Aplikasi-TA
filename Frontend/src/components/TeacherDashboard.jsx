@@ -102,11 +102,21 @@ export default function TeacherDashboard() {
     const base64Images = [];
 
     try {
+      // ✅ Extract characters from comic script for consistency
+      const characters = comicScript?.characters || [];
+
+      if (characters.length > 0) {
+        console.log(`✅ Using ${characters.length} character references for consistency:`, characters);
+      } else {
+        console.warn('⚠️ No character references found - consistency may vary');
+      }
+
       for (let i = 0; i < panels.length; i++) {
         setLoadingMessage(`Generating panel ${i + 1}/${panels.length}...`);
 
         const panelRequest = {
           panel: panels[i],
+          characters: characters,  // ✅ ADD: Pass characters for consistency
           width: 512,
           height: 512,
           steps: 25,

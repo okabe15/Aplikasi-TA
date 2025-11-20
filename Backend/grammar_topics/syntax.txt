@@ -1,0 +1,133 @@
+### OVERVIEW ###
+This document provides archetypes for creating questions about sentence structure and word order, especially differences between classic/archaic English syntax and modern English syntax.
+
+---
+
+### ARCHETYPE 1: Classic vs Modern Word Order ###
+Instruction for AI: Test transformation of archaic inverted word order to modern standard word order using examples from the comic's classic text.
+
+Example format:
+Question: "The classic text says, 'Never have I seen such bravery.' What is the modern, standard word order?"
+ClassicText: "Never have I seen such bravery"
+ModernText: "I have never seen such bravery"
+Options: ["I never have seen such bravery", "I have never seen such bravery", "Never I have seen such bravery", "I have seen never such bravery"]
+Correct: 1
+Explanation: "Modern English typically uses Subject-Verb-Object order without inversion. Classic/formal English often inverts the subject and auxiliary verb after negative adverbs like 'never.' Modern: 'I have never seen such bravery.'"
+GrammarRule: "Word Order: Classic Inversion → Modern SVO"
+
+---
+
+### ARCHETYPE 2: Object-Verb-Subject (Archaic) ###
+Instruction for AI: Test understanding of archaic OVS word order and its transformation to modern SVO.
+
+Example format:
+Question: "The classic dialogue says, 'This quest must I complete.' How would we say this in modern English with standard word order?"
+ClassicText: "This quest must I complete"
+ModernText: "I must complete this quest"
+Options: ["I must complete this quest", "This quest I must complete", "Must I complete this quest", "Complete this quest I must"]
+Correct: 0
+Explanation: "The classic text uses Object-Verb-Subject order ('This quest must I complete'), which sounds poetic or archaic. Modern English uses Subject-Verb-Object: 'I must complete this quest.'"
+GrammarRule: "Syntax: OVS → SVO transformation"
+
+---
+
+### ARCHETYPE 3: Question Formation ###
+Instruction for AI: Test correct question formation with subject-auxiliary inversion based on comic dialogue.
+
+Example format:
+Question: "A character wants to ask about the treasure's location. Which question has correct syntax?"
+ComicReference: "Panel 3: Character inquiring about treasure"
+Options: ["Where the treasure is hidden?", "Where is the treasure hidden?", "Where hidden is the treasure?", "Is where the treasure hidden?"]
+Correct: 1
+Explanation: "In questions with auxiliary verbs, English uses inversion: Question word + auxiliary + subject + main verb. Correct: 'Where is the treasure hidden?' Not: 'Where the treasure is hidden' (statement order)."
+GrammarRule: "Question Syntax: Wh-word + Auxiliary + Subject + Verb"
+
+---
+
+### ARCHETYPE 4: Adjective Order ###
+Instruction for AI: Test understanding of the standard order of multiple adjectives before a noun.
+
+Example format:
+Question: "In the narration describing a sword, which phrase uses correct adjective order?"
+ComicReference: "Panel 4: Describing an ancient magical weapon"
+Options: ["a magical ancient long steel sword", "a long ancient steel magical sword", "an ancient long magical steel sword", "a steel magical ancient long sword"]
+Correct: 2
+Explanation: "English adjectives follow a specific order: Opinion-Size-Age-Shape-Color-Origin-Material-Purpose. Correct: 'an ancient (age) long (size) magical (opinion) steel (material) sword.'"
+GrammarRule: "Adjective Order: OSASCOMP"
+
+---
+
+### ARCHETYPE 5: Relative Clause Position ###
+Instruction for AI: Test proper placement of relative clauses (who, which, that) to avoid ambiguity.
+
+Example format:
+Question: "Which sentence is clearest and grammatically correct?"
+Options: ["The hero found the sword which was hidden in the cave that was rusty", "The hero found the rusty sword which was hidden in the cave", "The hero found the sword that was rusty which was hidden in the cave", "Which was hidden in the cave the hero found the rusty sword"]
+Correct: 1
+Explanation: "Relative clauses should be placed immediately after the noun they modify to avoid confusion. 'The rusty sword which was hidden in the cave' is clearest - 'which' clearly refers to 'sword.'"
+GrammarRule: "Relative Clause Placement"
+
+---
+
+### ARCHETYPE 6: Verb Position in Subordinate Clauses ###
+Instruction for AI: Test understanding that English maintains SVO order even in subordinate clauses, unlike some languages.
+
+Example format:
+Question: "Complete this sentence with correct word order: 'The king wondered where _____.'"
+Options: ["the treasure was hidden", "was hidden the treasure", "was the treasure hidden", "hidden the treasure was"]
+Correct: 0
+Explanation: "In subordinate clauses (after 'where,' 'when,' 'how,' etc.), English maintains Subject-Verb-Object order without inversion. 'Where the treasure was hidden' (not 'where was the treasure hidden')."
+GrammarRule: "Subordinate Clause: No Inversion (SVO maintained)"
+
+---
+
+### ARCHETYPE 7: Cleft Sentences for Emphasis ###
+Instruction for AI: Test understanding of cleft sentences ('It is...that' or 'What...is') used for emphasis.
+
+Example format:
+Question: "Which sentence correctly uses a cleft structure to emphasize 'the hero' as the one who saved the village?"
+ComicReference: "Panel 6: Emphasizing the hero's role"
+Options: ["The hero saved the village", "It was the hero who saved the village", "It was the village that the hero saved", "What saved the village was the hero"]
+Correct: 1
+Explanation: "Cleft sentences use 'It is/was...who/that' to emphasize a particular element. 'It was the hero who saved the village' emphasizes 'the hero' as the savior, not someone else."
+GrammarRule: "Cleft Sentence: It + be + focus + who/that clause"
+
+---
+
+### ARCHETYPE 8: Parallel Structure ###
+Instruction for AI: Test maintenance of parallel structure in lists or coordinated elements.
+
+Example format:
+Question: "Which sentence maintains correct parallel structure?"
+Options: ["The knight is brave, loyal, and showing great strength", "The knight is brave, loyal, and strong", "The knight is brave, loyally, and strong", "The knight is being brave, loyalty, and strong"]
+Correct: 1
+Explanation: "Parallel structure requires that items in a list have the same grammatical form. Correct: 'brave, loyal, and strong' (all adjectives). Not: 'brave, loyal, and showing great strength' (adjective, adjective, verb phrase)."
+GrammarRule: "Parallel Structure in Lists"
+
+---
+
+### ARCHETYPE 9: Negation Placement ###
+Instruction for AI: Test correct placement of negation words (not, never, no) in English sentences.
+
+Example format:
+Question: "Which sentence correctly places the negation?"
+ClassicText: "I never saw not such a sight"
+ModernText: "I never saw such a sight" or "I have never seen such a sight"
+Options: ["I never saw not such a sight (double negative)", "I never saw such a sight (single negative)", "I saw not never such a sight", "Not I saw such a sight never"]
+Correct: 1
+Explanation: "Modern English avoids double negatives. Use a single negative: 'I never saw such a sight' or 'I have never seen such a sight.' Double negatives ('never...not') were common in Old English but are now non-standard."
+GrammarRule: "Avoid Double Negatives (Modern English)"
+
+---
+
+### ARCHETYPE 10: Fronting for Emphasis ###
+Instruction for AI: Test understanding of fronting (moving elements to sentence-initial position) for emphasis or contrast.
+
+Example format:
+Question: "The classic text says, 'Great is the power of this sword.' Why is 'great' placed at the beginning?"
+ClassicText: "Great is the power of this sword"
+ModernText: "The power of this sword is great"
+Options: ["It's a grammar error", "For emphasis and dramatic effect", "Because it's shorter", "To confuse the reader"]
+Correct: 1
+Explanation: "Fronting moves an element (here, the adjective 'great') to the front of the sentence for emphasis or dramatic effect. Standard modern order: 'The power is great.' Fronted: 'Great is the power' (emphasizes 'great')."
+GrammarRule: "Fronting for Emphasis"

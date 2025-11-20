@@ -1,0 +1,80 @@
+### OVERVIEW ###
+This document provides archetypes for creating questions about pronouns, especially classic/archaic pronouns (thou, thy, thee, ye) vs modern pronouns (you, your). Adapt to the comic's dialogue and text transformations.
+
+---
+
+### ARCHETYPE 1: Classic to Modern Pronoun Transformation ###
+Instruction for AI: Test conversion of archaic pronouns to modern equivalents based on the comic's classic text.
+
+Example format:
+Question: "In the classic text, it says 'Thou art brave.' What is the modern English equivalent?"
+ClassicText: "Thou art brave"
+ModernText: "You are brave"
+Options: ["You is brave", "You are brave", "Your are brave", "Thee are brave"]
+Correct: 1
+Explanation: "'Thou' (classic) = 'you' (modern, singular). 'Art' (classic) = 'are' (modern). Together: 'You are brave.'"
+GrammarRule: "Classic Pronoun: Thou → You"
+
+---
+
+### ARCHETYPE 2: Possessive Pronoun Conversion ###
+Instruction for AI: Test understanding of possessive pronoun changes from classic to modern English.
+
+Example format:
+Question: "The classic text says, 'Thy sword is mighty.' How would we say this in modern English?"
+ClassicText: "Thy sword is mighty"
+ModernText: "Your sword is mighty"
+Options: ["You sword is mighty", "Your sword is mighty", "Thine sword is mighty", "Thou sword is mighty"]
+Correct: 1
+Explanation: "'Thy' is the classic possessive form meaning 'your.' In modern English, we simply say 'your sword.'"
+GrammarRule: "Classic Possessive: Thy/Thine → Your"
+
+---
+
+### ARCHETYPE 3: Subject vs Object Pronouns ###
+Instruction for AI: Create questions testing subject pronouns (I, he, she, they) vs object pronouns (me, him, her, them) based on comic dialogue.
+
+Example format:
+Question: "In Panel 3, the character says, 'The treasure belongs to my brother and ___.' Which pronoun is correct?"
+Options: ["I", "me", "myself", "my"]
+Correct: 1
+Explanation: "After the preposition 'to,' we use the object pronoun 'me,' not the subject pronoun 'I.' The full sentence is: 'The treasure belongs to my brother and me.'"
+GrammarRule: "Object Pronouns After Prepositions"
+
+---
+
+### ARCHETYPE 4: Archaic Forms Identification ###
+Instruction for AI: Test recognition of various archaic pronoun forms and their meanings.
+
+Example format:
+Question: "In the classic dialogue, it says 'I give this unto thee.' What does 'thee' mean?"
+ClassicText: "I give this unto thee"
+Options: ["they", "you (as object)", "your", "themselves"]
+Correct: 1
+Explanation: "'Thee' is an archaic object pronoun meaning 'you' (when you is receiving the action). Modern: 'I give this to you.'"
+GrammarRule: "Classic Object Pronoun: Thee → You (object)"
+
+---
+
+### ARCHETYPE 5: Reflexive Pronouns ###
+Instruction for AI: Test proper use of reflexive pronouns (myself, yourself, himself, themselves) based on comic context.
+
+Example format:
+Question: "The narration says, 'The hero saw ___ in the mirror.' Which pronoun completes the sentence correctly?"
+ComicReference: "Panel 5: Character looking at their reflection"
+Options: ["him", "himself", "he", "his"]
+Correct: 1
+Explanation: "When the subject and object of a sentence are the same person, we use a reflexive pronoun. 'The hero saw himself' - both subject and object refer to the hero."
+GrammarRule: "Reflexive Pronouns - Same Subject and Object"
+
+---
+
+### ARCHETYPE 6: Pronoun Agreement ###
+Instruction for AI: Test pronoun agreement with antecedents (matching singular/plural, gender).
+
+Example format:
+Question: "In Panel 2, the narration says, 'Every student must submit ___ assignment by Friday.' Which pronoun is correct?"
+Options: ["his", "their", "his or her", "its"]
+Correct: 2
+Explanation: "In modern English, we often use 'their' as a singular pronoun to be gender-inclusive, or we can say 'his or her.' Both are acceptable with singular 'every student.'"
+GrammarRule: "Pronoun-Antecedent Agreement"

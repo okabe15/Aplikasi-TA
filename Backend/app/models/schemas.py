@@ -1,6 +1,6 @@
 # schemas.py
 from pydantic import BaseModel, EmailStr, field_validator, ConfigDict
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 
 class UserRegister(BaseModel):
     username: str
@@ -98,20 +98,21 @@ class ComicScriptResponse(BaseModel):
 
 class ImageGenerationRequest(BaseModel):
     panel: ComicPanel
+    characters: Optional[List[Dict[str, Any]]] = None  # ✅ ADD for character consistency
     width: int = 1024
     height: int = 1024
     steps: int = 25
     cfg: float = 7.5
     negative_prompt: str = "blurry, low quality, distorted, ugly, bad anatomy"
     seed: Optional[int] = None
-    
+
     @field_validator('width', 'height')
     @classmethod
     def validate_dimensions(cls, v):
         if v < 256 or v > 2048:
             raise ValueError('Image dimensions must be between 256 and 2048 pixels')
         return v
-    
+
     @field_validator('steps')
     @classmethod
     def validate_steps(cls, v):
@@ -165,6 +166,7 @@ class GrammarTopic(BaseModel):
 class Exercise(BaseModel):
     id: str
     type: str
+    difficulty: str = "medium"  # ✅ ADD: beginner, medium, advanced
     question: str
     classic_text: Optional[str] = None
     modern_text: Optional[str] = None
@@ -175,7 +177,15 @@ class Exercise(BaseModel):
     correct: int
     explanation: str
     grammar_rule: Optional[str] = None
-    
+
+    @field_validator('difficulty')
+    @classmethod
+    def validate_difficulty(cls, v):
+        valid_levels = ['beginner', 'medium', 'advanced']
+        if v not in valid_levels:
+            raise ValueError(f'Difficulty must be one of: {valid_levels}')
+        return v
+
     @field_validator('correct')
     @classmethod
     def validate_correct_answer(cls, v, info):

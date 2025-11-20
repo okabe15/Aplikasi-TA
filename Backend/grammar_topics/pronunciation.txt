@@ -1,0 +1,108 @@
+### OVERVIEW ###
+This document provides archetypes for creating pronunciation questions using the comic's audio features, dialogue, and classic-to-modern text transformations.
+
+---
+
+### ARCHETYPE 1: Silent Letters ###
+Instruction for AI: Test awareness of silent letters in English words that appear in the comic.
+
+Example format:
+Question: "In Panel 2, the character says the word 'knight.' Which letter is NOT pronounced?"
+AudioText: "knight"
+Options: ["k", "n", "i", "t"]
+Correct: 0
+Explanation: "In 'knight,' the 'k' is silent. We pronounce it as /naɪt/ (sounds like 'night'). Many English words have silent letters."
+GrammarRule: "Silent Letters: Knight, Know, Knife"
+
+---
+
+### ARCHETYPE 2: Homophone Identification ###
+Instruction for AI: Test understanding of homophones (words that sound the same but have different meanings/spellings) using comic context.
+
+Example format:
+Question: "In the dialogue, the character says, 'Eye sea the ship!' This sounds wrong because 'eye' and 'sea' are homophones. What should the correct spelling be?"
+AudioText: "Eye sea the ship"
+Options: ["Eye sea", "I see", "Aye sea", "I sea"]
+Correct: 1
+Explanation: "Homophones: 'Eye' (body part) sounds like 'I' (pronoun). 'Sea' (ocean) sounds like 'see' (verb to look). Correct: 'I see the ship.'"
+GrammarRule: "Homophones: I/Eye, See/Sea"
+
+---
+
+### ARCHETYPE 3: Stress Patterns in Words ###
+Instruction for AI: Test understanding of word stress (syllable emphasis) using vocabulary from the comic.
+
+Example format:
+Question: "In the word 'photography' from the narration, which syllable is stressed? pho-TO-gra-phy."
+AudioText: "photography"
+Options: ["First syllable: PHO-tography", "Second syllable: pho-TO-graphy", "Third syllable: photo-GRA-phy", "Fourth syllable: photogra-PHY"]
+Correct: 1
+Explanation: "In 'photography,' the second syllable is stressed: pho-TO-gra-phy. English word stress can change meaning and must be learned for each word."
+GrammarRule: "Word Stress Patterns"
+
+---
+
+### ARCHETYPE 4: Pronunciation of -ED Endings ###
+Instruction for AI: Test the three different pronunciations of -ed endings (/t/, /d/, /ɪd/) using past tense verbs from the comic.
+
+Example format:
+Question: "In Panel 4, the character says 'walked.' How is the -ed ending pronounced?"
+AudioText: "walked"
+Options: ["/t/ sound (like 'walk-t')", "/d/ sound (like 'walk-d')", "/ɪd/ sound (like 'walk-id')", "Silent"]
+Correct: 0
+Explanation: "After voiceless sounds (like /k/ in 'walk'), the -ed is pronounced /t/. 'Walked' sounds like 'walk-t.' Examples: talked, washed, helped."
+GrammarRule: "-ED Pronunciation: /t/ after voiceless sounds"
+
+---
+
+### ARCHETYPE 5: Archaic Pronunciation vs Modern ###
+Instruction for AI: Test differences in pronunciation between classic archaic words and modern equivalents.
+
+Example format:
+Question: "In classic English, 'thou' was pronounced /ðaʊ/. Which modern word sounds similar?"
+ClassicText: "thou"
+Options: ["through", "though", "thought", "thin"]
+Correct: 1
+Explanation: "'Thou' /ðaʊ/ rhymes with the modern word 'thou' or 'bough' (tree branch). Not to be confused with 'through' or 'thought.'"
+GrammarRule: "Archaic Pronunciation: Thou"
+
+---
+
+### ARCHETYPE 6: Difficult Consonant Clusters ###
+Instruction for AI: Test pronunciation of difficult consonant combinations that appear in the comic's vocabulary.
+
+Example format:
+Question: "In the word 'strength' from the narration, how many sounds are in the consonant cluster at the end?"
+AudioText: "strength"
+Options: ["Three sounds: n-g-th", "Four sounds: ng-th", "Two sounds: ng-th", "One sound: th"]
+Correct: 0
+Explanation: "'Strength' ends with a difficult cluster: /ŋkθ/ - three sounds (ng sound + k sound + th sound). This is one of English's hardest pronunciation challenges."
+GrammarRule: "Consonant Clusters"
+
+---
+
+### ARCHETYPE 7: Vowel Sound Distinctions ###
+Instruction for AI: Test ability to distinguish between similar vowel sounds using minimal pairs from the comic.
+
+Example format:
+Question: "Listen to the difference: 'ship' vs 'sheep.' In Panel 3, the character says 'I saw a ship on the sea.' Which vowel sound is in 'ship'?"
+AudioText: "ship"
+AudioType: "classic"
+Options: ["Short /ɪ/ sound (like 'bit')", "Long /iː/ sound (like 'beat')", "Short /e/ sound (like 'bet')", "Diphthong /aɪ/ (like 'bite')"]
+Correct: 0
+Explanation: "'Ship' has a short /ɪ/ sound (like 'bit'). 'Sheep' has a long /iː/ sound (like 'beat'). This is an important distinction in English pronunciation."
+GrammarRule: "Vowel Sounds: /ɪ/ vs /iː/"
+
+---
+
+### ARCHETYPE 8: Intonation and Meaning ###
+Instruction for AI: Test understanding of how intonation (rising/falling pitch) changes meaning, using dialogue from the comic.
+
+Example format:
+Question: "In Panel 2, the character says 'You're coming with me' with falling intonation. What does this suggest?"
+AudioText: "You're coming with me"
+AudioType: "dialogue"
+Options: ["It's a question asking for confirmation", "It's a statement or command", "It's expressing surprise", "It's showing uncertainty"]
+Correct: 1
+Explanation: "Falling intonation (pitch going down) in English typically indicates a statement or command. Rising intonation would make it a question: 'You're coming with me?'"
+GrammarRule: "Intonation: Falling = Statement, Rising = Question"

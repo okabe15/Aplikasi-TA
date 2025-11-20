@@ -1,0 +1,91 @@
+### OVERVIEW ###
+This document provides archetypes for creating questions about modal verbs (can, could, may, might, must, should, will, would, shall). Questions should test understanding of meaning, usage, and nuance in the comic's context.
+
+---
+
+### ARCHETYPE 1: Modal Selection Based on Meaning ###
+Instruction for AI: Test which modal verb best expresses the intended meaning (ability, permission, obligation, advice, etc.).
+
+Example format:
+Question: "In Panel 3, the character wants to express strong obligation. Which sentence is correct? 'You ___ complete this quest.'"
+ComicReference: "Panel 3: Elder giving a mandatory quest"
+Options: ["can complete", "should complete", "must complete", "might complete"]
+Correct: 2
+Explanation: "'Must' expresses strong obligation or necessity. The quest is not optional but required. 'Can' = ability, 'should' = advice, 'might' = possibility."
+GrammarRule: "Modal Must - Strong Obligation"
+
+---
+
+### ARCHETYPE 2: Classic Modal Forms ###
+Instruction for AI: Test transformation of archaic modal forms to modern equivalents.
+
+Example format:
+Question: "The classic text says, 'Thou shalt not pass!' What is the modern equivalent?"
+ClassicText: "Thou shalt not pass"
+ModernText: "You shall not pass" or "You must not pass"
+Options: ["You will not pass", "You shall not pass", "You can not pass", "You are not passing"]
+Correct: 1
+Explanation: "'Shalt' is the archaic form of 'shall' used with 'thou.' In modern English, 'shall' is less common, but 'You shall not pass' or 'You must not pass' preserves the strong prohibition meaning."
+GrammarRule: "Classic Modal: Shalt → Shall/Must"
+
+---
+
+### ARCHETYPE 3: Modals of Deduction ###
+Instruction for AI: Test modals used for making logical deductions (must, might, can't, could) based on evidence in the comic.
+
+Example format:
+Question: "Looking at Panel 4 where fresh footprints lead to the cave, the detective says, 'The thief ___ be hiding inside.' Which modal shows strong logical certainty?"
+ComicReference: "Panel 4: Fresh footprints leading into cave"
+Options: ["might be", "could be", "must be", "can be"]
+Correct: 2
+Explanation: "'Must' expresses strong logical deduction based on evidence. The fresh footprints strongly suggest the thief is inside. 'Might/could' show less certainty."
+GrammarRule: "Modal Must - Logical Deduction (90% certain)"
+
+---
+
+### ARCHETYPE 4: Polite Requests and Permission ###
+Instruction for AI: Test the difference in politeness levels between modals (can, could, may, might).
+
+Example format:
+Question: "In Panel 2, the character wants to politely ask permission to enter the castle. Which is the MOST polite?"
+Options: ["Can I enter?", "May I enter?", "Could I enter?", "Will I enter?"]
+Correct: 1
+Explanation: "'May' is the most formal and polite way to ask permission. 'Could' is also polite. 'Can' is less formal. 'Will' doesn't ask permission but states future action."
+GrammarRule: "Modal May - Formal Permission Request"
+
+---
+
+### ARCHETYPE 5: Advice and Recommendation ###
+Instruction for AI: Test modals for giving advice (should, ought to, had better, could).
+
+Example format:
+Question: "The character says, 'You ___ practice your sword skills before the battle.' Which modal gives the strongest advice?"
+Options: ["could practice", "should practice", "might practice", "can practice"]
+Correct: 1
+Explanation: "'Should' expresses strong advice or recommendation. 'Could' = suggestion (weaker), 'might' = possibility (not advice), 'can' = ability (not advice)."
+GrammarRule: "Modal Should - Strong Advice"
+
+---
+
+### ARCHETYPE 6: Past Modals (Should Have, Could Have, Must Have) ###
+Instruction for AI: Test understanding of past modals expressing regret, criticism, or deduction about past events.
+
+Example format:
+Question: "After the hero fails to save the village, the narration says, 'He ___ arrived earlier.' Which past modal expresses regret?"
+ComicReference: "Panel 6: Village destroyed, hero arrived too late"
+Options: ["should arrive", "should have arrived", "must arrive", "can have arrived"]
+Correct: 1
+Explanation: "'Should have arrived' (past modal) expresses regret or criticism about a past action. It means he didn't arrive earlier, but he should have."
+GrammarRule: "Past Modal Should Have - Regret/Criticism"
+
+---
+
+### ARCHETYPE 7: Future Willingness and Promises ###
+Instruction for AI: Test 'will' vs 'would' for promises, offers, and willingness.
+
+Example format:
+Question: "The hero promises, 'I ___ protect you from all harm.' Which modal shows a strong promise?"
+Options: ["can protect", "will protect", "might protect", "should protect"]
+Correct: 1
+Explanation: "'Will' is used for promises, offers, and expressing future willingness. It shows strong commitment. 'Can' = ability, 'might' = possibility (weak), 'should' = obligation."
+GrammarRule: "Modal Will - Promises and Willingness"

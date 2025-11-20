@@ -10,30 +10,71 @@ class ComfyUIService:
     
     # ✅ UPDATED: Add characters parameter
     def build_prompt(self, panel: ComicPanel, characters: List[Dict[str, Any]] = None) -> str:
-        """Build image generation prompt from panel with character consistency"""
-    
-    # ✅ ADD: Character reference at the beginning
+        """Build image generation prompt from panel with STRONG character consistency"""
+
         prompt = ""
-    
+
+        # ✅ IMPROVED: More emphatic character consistency instructions
         if characters and len(characters) > 0:
-            prompt += "CHARACTER REFERENCE (use exact descriptions):\n"
+            prompt += "CRITICAL - CHARACTER CONSISTENCY REQUIRED:\n"
+            prompt += "USE THESE EXACT CHARACTER DESCRIPTIONS IN EVERY PANEL:\n\n"
+
             for char in characters:
-                # ✅ Include character ID for tracking
-                prompt += f"[{char.get('id', 'unknown')}] {char['name']}: {char['description']}\n"
-            prompt += "\n"
-        
-        # Original prompt building
-        prompt += f"{panel.composition} of {panel.visual}"
-        
+                char_name = char.get('name', 'Unknown')
+                char_desc = char.get('description', '')
+                char_role = char.get('role', 'character')
+
+                # ✅ Enhanced formatting with visual markers
+                prompt += f"**{char_name}** ({char_role}):\n"
+                prompt += f"- MUST LOOK EXACTLY LIKE: {char_desc}\n"
+                prompt += f"- SAME FACE, SAME HAIR, SAME CLOTHING in ALL panels\n"
+                prompt += f"- Distinctive features: {self._extract_key_features(char_desc)}\n\n"
+
+            prompt += "CONSISTENCY RULES:\n"
+            prompt += "- Characters MUST look identical to previous panels\n"
+            prompt += "- Maintain exact same facial features, hair style, and clothing\n"
+            prompt += "- NO variations in character appearance\n\n"
+            prompt += "---\n\n"
+
+        # Scene composition
+        prompt += f"SCENE: {panel.composition} showing {panel.visual}"
+
         if panel.setting:
-            prompt += f", setting: {panel.setting}"
-        
+            prompt += f", LOCATION: {panel.setting}"
+
         if panel.mood:
-            prompt += f", atmosphere: {panel.mood}"
-        
-        prompt += ", western comic book art style, colorful american comic book style, bold vibrant colors, dynamic shading, comic panel border, professional comic book art, detailed illustration, high quality, clean composition"
-        
+            prompt += f", MOOD: {panel.mood}"
+
+        # Style instructions
+        prompt += ", western comic book art style, colorful american comic book illustration"
+        prompt += ", bold vibrant colors, dynamic shading, comic panel border"
+        prompt += ", professional comic book art, detailed illustration, high quality"
+        prompt += ", clean composition, consistent character design"
+
         return prompt
+
+    def _extract_key_features(self, description: str) -> str:
+        """Extract key visual features from character description for emphasis"""
+        features = []
+
+        # Look for key descriptive words
+        keywords = ['hair', 'eyes', 'tall', 'short', 'beard', 'glasses', 'hat', 'dress', 'suit', 'jacket']
+        desc_lower = description.lower()
+
+        for keyword in keywords:
+            if keyword in desc_lower:
+                # Find the phrase containing this keyword
+                words = description.split()
+                for i, word in enumerate(words):
+                    if keyword in word.lower():
+                        # Get surrounding context
+                        start = max(0, i-2)
+                        end = min(len(words), i+3)
+                        phrase = ' '.join(words[start:end])
+                        features.append(phrase)
+                        break
+
+        return ', '.join(features[:3]) if features else description[:100]
     
     # ✅ UPDATED: Add characters parameter
     async def generate_image(

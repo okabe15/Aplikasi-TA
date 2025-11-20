@@ -1,0 +1,104 @@
+### OVERVIEW ###
+This document provides archetypes for creating vocabulary questions, especially focusing on archaic/classic words vs modern equivalents. Questions should use the comic's dialogue, narration, and text transformations.
+
+---
+
+### ARCHETYPE 1: Classic to Modern Word Transformation ###
+Instruction for AI: Test understanding of archaic vocabulary and its modern equivalent from the comic's classic text.
+
+Example format:
+Question: "In the classic text, it says 'Methinks the knight is valiant.' What does 'methinks' mean in modern English?"
+ClassicText: "Methinks the knight is valiant"
+ModernText: "I think the knight is brave"
+Options: ["I think", "You think", "We think", "He thinks"]
+Correct: 0
+Explanation: "'Methinks' is an archaic word meaning 'I think.' It comes from Old English 'me thinketh' (it seems to me)."
+GrammarRule: "Archaic Vocabulary: Methinks = I think"
+
+---
+
+### ARCHETYPE 2: Meaning from Context ###
+Instruction for AI: Test ability to infer the meaning of an archaic or unfamiliar word from the comic's context (images, dialogue, situation).
+
+Example format:
+Question: "In Panel 3, the narration says 'The warrior wielded his mighty blade.' Based on the image of him holding and swinging a sword, what does 'wielded' mean?"
+ComicReference: "Panel 3: Warrior holding and swinging a sword in battle"
+Options: ["dropped", "held and used skillfully", "sharpened", "feared"]
+Correct: 1
+Explanation: "From the context (holding and using a sword in battle), 'wielded' means to hold and use a weapon or tool skillfully."
+GrammarRule: "Vocabulary: Context Clues"
+
+---
+
+### ARCHETYPE 3: Synonyms and Word Choice ###
+Instruction for AI: Test understanding of synonyms and choosing the best word for a specific context in the comic.
+
+Example format:
+Question: "The classic text says 'The king was wroth.' Which modern word best captures the meaning of 'wroth'?"
+ClassicText: "The king was wroth"
+Options: ["happy", "angry", "tired", "wealthy"]
+Correct: 1
+Explanation: "'Wroth' is an archaic word meaning 'angry' or 'furious.' In modern English, we would say 'The king was angry.'"
+GrammarRule: "Archaic Vocabulary: Wroth = Angry"
+
+---
+
+### ARCHETYPE 4: Formal vs Informal Vocabulary ###
+Instruction for AI: Test awareness of formality levels in vocabulary choices based on the comic's setting or character.
+
+Example format:
+Question: "In Panel 5, the royal advisor speaks to the king. Which word is more appropriate for this formal setting? 'The kingdom ___ your guidance.'"
+ComicReference: "Panel 5: Formal court setting, advisor speaking to king"
+Options: ["needs", "requires", "wants", "likes"]
+Correct: 1
+Explanation: "In formal contexts, 'requires' is more appropriate than 'needs.' It sounds more professional and respectful. 'Wants' and 'likes' are too casual."
+GrammarRule: "Vocabulary: Register and Formality"
+
+---
+
+### ARCHETYPE 5: Commonly Confused Words ###
+Instruction for AI: Test understanding of commonly confused words (affect/effect, their/there/they're, etc.) using examples from the comic.
+
+Example format:
+Question: "In the narration, which sentence is correct? 'The spell had a powerful ___ on the kingdom.'"
+Options: ["affect", "effect", "effects", "affects"]
+Correct: 1
+Explanation: "'Effect' (noun) means 'result' or 'consequence.' 'Affect' is usually a verb meaning 'to influence.' Here, we need the noun: 'a powerful effect.'"
+GrammarRule: "Commonly Confused: Affect (verb) vs Effect (noun)"
+
+---
+
+### ARCHETYPE 6: Idiomatic Expressions ###
+Instruction for AI: Test understanding of idioms or figurative language that might appear in the comic's dialogue.
+
+Example format:
+Question: "The character says, 'We must strike while the iron is hot.' What does this idiom mean?"
+Options: ["We should attack during summer", "We must use hot weapons", "We should act quickly while we have the opportunity", "We need to heat our weapons"]
+Correct: 2
+Explanation: "'Strike while the iron is hot' is an idiom meaning 'act quickly while you have a good opportunity.' It comes from blacksmithing - iron is easiest to shape when it's hot."
+GrammarRule: "Idiom: Strike while the iron is hot"
+
+---
+
+### ARCHETYPE 7: Multiple Meaning Words ###
+Instruction for AI: Test understanding of words with multiple meanings based on the comic's context.
+
+Example format:
+Question: "In Panel 2, the text says 'The knight bore a heavy burden.' What does 'bore' mean in this context?"
+ComicReference: "Panel 2: Knight carrying a heavy load on his back"
+Options: ["made someone feel bored", "drilled a hole", "carried or supported", "was born"]
+Correct: 2
+Explanation: "'Bore' is the past tense of 'bear,' which can mean 'to carry or support.' Here, it means the knight carried a heavy burden. Same spelling, different meaning from 'bore' (to make someone bored)."
+GrammarRule: "Multiple Meanings: Bore (to carry) vs Bore (to make bored)"
+
+---
+
+### ARCHETYPE 8: Collocations ###
+Instruction for AI: Test knowledge of common word combinations (collocations) in English.
+
+Example format:
+Question: "Which collocation is correct in this sentence from the comic? 'The hero ___ a great risk to save the village.'"
+Options: ["did a great risk", "made a great risk", "took a great risk", "had a great risk"]
+Correct: 2
+Explanation: "In English, we 'take a risk,' not 'do,' 'make,' or 'have' a risk. 'Take a risk' is the correct collocation (natural word combination)."
+GrammarRule: "Collocation: Take a risk (not make/do/have a risk)"

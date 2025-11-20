@@ -230,74 +230,119 @@ Be extremely detailed and specific. This description will be used for ALL images
 
         grammar_reference_text = "\n\n".join(context_from_files) if context_from_files else "(No manual grammar reference found.)"
 
-        # 3️⃣ Siapkan system message (AI akan gabungkan isi grammar + komik)
+        # 3️⃣ Siapkan system message dengan RAG instruction yang lebih kuat
         system_message = f"""
-You are an expert English teacher and content creator.
+You are an expert English teacher and content creator specializing in grammar instruction.
 
-# ✅ TAMBAH 1 LINE INI
 {character_reference}
 
-You will create contextual multiple-choice questions that combine:
-1. Grammar patterns and examples from the reference text below.
-2. Dialogues and situations from the provided comic panels.
+## 📚 YOUR TASK: RAG-BASED QUESTION GENERATION
 
-Your task:
-- Use the grammar reference only as a theoretical guide (rules, examples, patterns).
-- Use the comic content as the main source of context.
-- Generate questions that sound natural in the comic world but teach grammar accurately.
-- Every question must reference a comic panel, its dialogue, or transformation between classic and modern text.
+Below, you will find GRAMMAR ARCHETYPES (question templates and patterns). These are NOT just examples - they are STRUCTURED TEMPLATES that you MUST follow.
 
+### HOW TO USE THE ARCHETYPES:
 
---- GRAMMAR REFERENCE (STYLE + THEORY) ---
+1. **READ each archetype carefully** - Each archetype has:
+   - An "Instruction for AI" telling you how to create that type of question
+   - An example format showing the structure
+   - Grammar rules to apply
+
+2. **FOLLOW the archetype structure exactly**:
+   - Use the same question pattern (Fill in blank? Transformation? Identification?)
+   - Match the format (what fields to include)
+   - Apply the grammar rule shown in the archetype
+
+3. **ADAPT to the comic content**:
+   - Replace archetype examples with actual dialogue/narration/setting from the comic panels below
+   - Keep character names, places, and events from the comic
+   - Ensure questions feel natural in the comic's world
+
+4. **MIX archetype types**:
+   - Use different archetypes (don't repeat the same pattern)
+   - Vary question types across the requested topics
+   - Distribute difficulty levels appropriately
+
+### DIFFICULTY GUIDELINES:
+- **"beginner"**: Simple vocabulary, basic tenses (present/past), articles, basic pronouns, straightforward transformations
+- **"medium"**: Modal verbs, compound sentences, passive voice basics, intermediate vocabulary, nuanced meanings
+- **"advanced"**: Complex conditionals, advanced passive voice, syntax changes, idiomatic expressions, subtle distinctions
+
+### QUESTION SOURCE REQUIREMENTS:
+Generate questions from ALL these sources (mix equally):
+1. **Dialogue-based**: Character speech and conversations
+2. **Narration-based**: Story narration text and descriptions
+3. **Setting-based**: Location descriptions, mood, atmosphere, visual context
+
+---
+## 📖 GRAMMAR ARCHETYPES (YOUR TEMPLATES)
 {grammar_reference_text}
---- END OF REFERENCE ---
+---
 
-Each question must include:
-- The comic context (dialogue or narration)
-- Four answer options
-- The correct index (0–3)
-- A clear explanation mentioning the grammar rule (tense, form, or structure)
+### OUTPUT FORMAT:
+Return ONLY a valid JSON array. No markdown code blocks, no explanations, no preamble.
 
-CRITICAL: Return ONLY a valid JSON array. No markdown, no code blocks, no explanations before or after.
-
-Format:
 [
   {{
-    "type": "grammar",
-    "question": "Question text based on the comic dialogue",
-    "classicText": "Relevant quote from original text (if any)",
-    "modernText": "Modern version of the same (if any)",
-    "comicReference": "Panel 1 or short scene description",
+    "type": "multiple_choice",
+    "difficulty": "beginner|medium|advanced",
+    "question": "Question following an archetype pattern, adapted to comic context",
+    "classic_text": "Direct quote from classic text if relevant",
+    "modern_text": "Modern translation if relevant",
+    "comic_reference": "Panel X: Specific dialogue/narration/setting detail",
     "options": ["Option A", "Option B", "Option C", "Option D"],
     "correct": 0,
-    "explanation": "Reason and grammar rule",
-    "grammarRule": "Present Perfect Continuous"
+    "explanation": "Clear explanation citing the grammar rule from archetype",
+    "grammar_rule": "Specific rule name from archetype"
   }}
 ]
+
+CRITICAL RULES:
+✅ Follow archetype structures - don't invent random questions
+✅ Use actual comic content (dialogue, narration, settings from panels below)
+✅ Match archetype difficulty guidance
+✅ Include grammar_rule field matching the archetype
+✅ Return ONLY valid JSON (no markdown, no extra text)
 """
 
-        # 4️⃣ Format isi komik & teks input
+        # 4️⃣ Format isi komik & teks input - INCLUDE SETTING & MOOD
         panels_text = "\n\n".join([
-            f"Panel {panel.id}:\n- Dialogue: \"{panel.dialogue}\"\n- Narration: {panel.narration}\n- Visual: {panel.visual}"
+            f"Panel {panel.id}:\n- Dialogue: \"{panel.dialogue}\"\n- Narration: {panel.narration}\n- Setting: {panel.setting}\n- Mood: {panel.mood}\n- Visual: {panel.visual}"
             for panel in request.panels
         ])
 
+        # ✅ Generate MORE questions - increase by 50%
+        total_questions = max(request.num_questions, 15)  # Minimum 15 questions
+        beginner_count = int(total_questions * 0.4)  # 40% beginner
+        medium_count = int(total_questions * 0.35)   # 35% medium
+        advanced_count = total_questions - beginner_count - medium_count  # 25% advanced
+
         user_prompt = f"""
-Create {request.num_questions} grammar-based questions based on the following comic context and grammar reference:
+Create {total_questions} grammar-based questions with the following difficulty distribution:
+- {beginner_count} BEGINNER level questions
+- {medium_count} MEDIUM level questions
+- {advanced_count} ADVANCED level questions
+
+Base your questions on ALL these sources (distribute equally):
+1. Character dialogues from panels
+2. Narration text from panels
+3. Setting descriptions and mood/atmosphere
 
 CLASSIC TEXT:
-{request.classic_text[:800]}
+{request.classic_text[:1000]}
 
 MODERN TEXT:
-{request.modern_text[:800]}
+{request.modern_text[:1000]}
 
-COMIC PANELS:
+COMIC PANELS (with dialogues, narrations, settings, and moods):
 {panels_text}
 
 FOCUS TOPICS: {', '.join(topic_descriptions)}
 
-Use the grammar reference only as guidance for question style, correctness, and tense logic — 
-but all question content and examples must come directly from the comic's scenes and dialogues.
+IMPORTANT:
+- Create a MIX of questions from dialogue, narration, AND setting descriptions
+- Ensure each difficulty level is accurately classified
+- Use the grammar reference for correctness, but all content must come from the comic
+- Make questions engaging and contextual to the story
 """
 
         # 5️⃣ Panggil API model AI (DeepSeek, GPT, dll.)
@@ -449,9 +494,15 @@ but all question content and examples must come directly from the comic's scenes
                     continue
                 
                 # Create exercise
+                # ✅ Get difficulty level (default to "medium" if not provided)
+                difficulty = ex_data.get("difficulty", "medium").lower()
+                if difficulty not in ["beginner", "medium", "advanced"]:
+                    difficulty = "medium"
+
                 exercise = Exercise(
                     id=str(uuid.uuid4()),
                     type=ex_data.get("type", "grammar"),
+                    difficulty=difficulty,  # ✅ ADD difficulty field
                     question=ex_data["question"],
                     classic_text=ex_data.get("classicText"),
                     modern_text=ex_data.get("modernText"),

@@ -243,11 +243,18 @@ async def generate_panel_image(
     """Step 3: Generate image for a single comic panel (TEACHER ONLY)"""
     try:
         logger.info(f"Teacher {current_teacher.username} generating panel image")
-        
-        # ✅ ADD: Get characters from request if available
-        characters = getattr(request, 'characters', None) or []
-        
-        # ✅ UPDATED: Pass characters to service
+
+        # ✅ Get characters from request (now properly supported in schema)
+        characters = request.characters or []
+
+        if characters:
+            logger.info(f"✅ Using {len(characters)} character references for consistency")
+            for char in characters:
+                logger.info(f"   - {char.get('name', 'Unknown')}: {char.get('role', 'N/A')}")
+        else:
+            logger.warning("⚠️ No character references provided - consistency may vary")
+
+        # ✅ Pass characters to service for consistent character rendering
         image_data = await comfyui_service.generate_image(request, characters=characters)
         
         return StreamingResponse(
@@ -493,6 +500,7 @@ async def get_module_exercises(
                         'id': exercise.id,
                         'question': exercise.question or '',
                         'type': exercise.type or 'multiple_choice',
+                        'difficulty': exercise.difficulty or 'medium',  # ✅ ADD difficulty
                         'options': options,  # Already list/dict
                         'correct_answer': correct_answer,  # Integer index
                         'explanation': exercise.explanation or '',
@@ -589,6 +597,7 @@ async def add_exercise_to_module(
                 id=exercise_id,
                 module=module,
                 type=exercise_data['type'],
+                difficulty=exercise_data.get('difficulty', 'medium'),  # ✅ ADD difficulty
                 question=exercise_data['question'],
                 options=options,  # List/dict - Json field
                 correct_answer=correct_answer,  # Integer

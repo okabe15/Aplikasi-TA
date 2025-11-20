@@ -1,0 +1,104 @@
+### OVERVIEW ###
+This document provides archetypes for creating questions about conditional sentences (if-clauses). Questions should test zero, first, second, third, and mixed conditionals based on the comic's context.
+
+---
+
+### ARCHETYPE 1: Zero Conditional (General Truth) ###
+Instruction for AI: Test understanding of zero conditional for facts and general truths using examples from the comic's world.
+
+Example format:
+Question: "Complete this general truth from the wizard's lecture: 'If you ___ magic without training, you ___ dangerous consequences.'"
+ComicReference: "Panel 2: Wizard teaching about magic safety"
+Options: ["use / will face", "use / face", "used / would face", "had used / would have faced"]
+Correct: 1
+Explanation: "Zero conditional (if + present, present) describes general truths or facts. 'If you use magic without training, you face dangerous consequences' - this is always true in this world."
+GrammarRule: "Zero Conditional: If + Present, Present (general truth)"
+
+---
+
+### ARCHETYPE 2: First Conditional (Real Future Possibility) ###
+Instruction for AI: Test first conditional for real, likely future situations from the comic.
+
+Example format:
+Question: "The character says, 'If we ___ quickly, we ___ the village in time.' Which conditional should we use for this real, likely future situation?"
+ComicReference: "Panel 3: Characters discussing their plans to save a village"
+Options: ["leave / will reach", "left / would reach", "had left / would have reached", "leave / reach"]
+Correct: 0
+Explanation: "First conditional (if + present, will + verb) is for real, possible future situations. 'If we leave quickly, we will reach the village in time' - this is a real plan they can do."
+GrammarRule: "First Conditional: If + Present, Will + Verb (real future)"
+
+---
+
+### ARCHETYPE 3: Second Conditional (Unreal/Hypothetical Present) ###
+Instruction for AI: Test second conditional for unreal or hypothetical present situations based on the comic's story.
+
+Example format:
+Question: "The poor villager dreams, 'If I ___ rich, I ___ a castle.' Which conditional expresses this unreal/hypothetical situation?"
+ComicReference: "Panel 4: Poor villager daydreaming, clearly not rich"
+Options: ["am / will buy", "were / would buy", "had been / would have bought", "am / buy"]
+Correct: 1
+Explanation: "Second conditional (if + past, would + verb) is for unreal or hypothetical present situations. The villager is NOT rich, so 'If I were rich, I would buy a castle' imagines an unreal situation."
+GrammarRule: "Second Conditional: If + Past, Would + Verb (unreal present)"
+
+---
+
+### ARCHETYPE 4: Third Conditional (Unreal Past / Regret) ###
+Instruction for AI: Test third conditional for past situations that didn't happen, often expressing regret based on the comic's events.
+
+Example format:
+Question: "After failing to save the kingdom, the hero regrets: 'If I ___ faster, I ___ the attack.' Complete this sentence about a past opportunity that was missed."
+ComicReference: "Panel 5: Hero arrived too late, kingdom destroyed"
+Options: ["had arrived / could have prevented", "arrived / could prevent", "arrive / will prevent", "had arrived / can prevent"]
+Correct: 0
+Explanation: "Third conditional (if + past perfect, would/could have + past participle) is for unreal past situations - things that didn't happen. 'If I had arrived faster, I could have prevented the attack' - but he didn't arrive faster."
+GrammarRule: "Third Conditional: If + Past Perfect, Would Have + Past Participle"
+
+---
+
+### ARCHETYPE 5: Mixed Conditionals ###
+Instruction for AI: Test mixed conditionals combining different time references (past condition, present result or vice versa).
+
+Example format:
+Question: "The narration says, 'If the wizard ___ the spell correctly years ago, the curse ___ a problem now.' What type of conditional is this?"
+ComicReference: "Panel 6: Present curse caused by past mistake"
+Options: ["First conditional", "Second conditional", "Third conditional", "Mixed conditional (past condition, present result)"]
+Correct: 3
+Explanation: "This is a mixed conditional: past condition (if he had cast) → present result (wouldn't be). 'If the wizard had cast the spell correctly years ago, the curse wouldn't be a problem now.'"
+GrammarRule: "Mixed Conditional: Past Condition, Present Result"
+
+---
+
+### ARCHETYPE 6: Unless (If Not) ###
+Instruction for AI: Test understanding of 'unless' as meaning 'if not' using the comic's context.
+
+Example format:
+Question: "Rewrite this sentence using 'unless': 'If you don't complete the quest, the kingdom will fall.' How should it be written?"
+Options: ["Unless you complete the quest, the kingdom will fall", "Unless you don't complete the quest, the kingdom will fall", "Unless you completed the quest, the kingdom will fall", "Unless the kingdom falls, you complete the quest"]
+Correct: 0
+Explanation: "'Unless' means 'if not,' so we remove 'don't': 'Unless you complete the quest (=if you don't complete the quest), the kingdom will fall.' Don't use double negatives with 'unless.'"
+GrammarRule: "Unless = If Not (no double negative)"
+
+---
+
+### ARCHETYPE 7: Were vs Was in Second Conditional ###
+Instruction for AI: Test formal usage of 'were' with all subjects in second conditional.
+
+Example format:
+Question: "Which is more grammatically formal in the character's wish: 'If I ___ the king, I would change everything.'"
+Options: ["was", "were", "am", "had been"]
+Correct: 1
+Explanation: "In second conditional, 'were' is used with ALL subjects (I/he/she/it) in formal English. 'If I were the king' (not 'was') is the grammatically correct form, though 'was' is common in informal speech."
+GrammarRule: "Second Conditional: Use 'were' for all subjects (formal)"
+
+---
+
+### ARCHETYPE 8: Conditional in Questions ###
+Instruction for AI: Test conditional forms in question format based on comic dialogue.
+
+Example format:
+Question: "The character asks, 'What would you do if you ___ a dragon?' Which verb form completes this second conditional question?"
+ComicReference: "Panel 7: Character asking hypothetical question"
+Options: ["see", "saw", "had seen", "will see"]
+Correct: 1
+Explanation: "Second conditional in questions: What would + subject + do + if + subject + past tense. 'What would you do if you saw a dragon?' - hypothetical situation."
+GrammarRule: "Second Conditional Questions"

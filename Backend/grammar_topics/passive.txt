@@ -1,0 +1,89 @@
+### OVERVIEW ###
+This document provides archetypes for creating questions about passive voice vs active voice. Questions should test recognition, transformation, and appropriate usage based on the comic's context.
+
+---
+
+### ARCHETYPE 1: Active to Passive Transformation ###
+Instruction for AI: Test ability to transform active voice sentences to passive voice using examples from the comic.
+
+Example format:
+Question: "The dialogue says, 'The dragon destroyed the village.' How would we say this in passive voice?"
+Options: ["The village destroyed by the dragon", "The village was destroyed by the dragon", "The dragon was destroyed by the village", "The village destroys the dragon"]
+Correct: 1
+Explanation: "Passive voice: Object becomes subject + be verb + past participle + by agent. Active: 'The dragon (subject) destroyed (verb) the village (object).' Passive: 'The village (new subject) was destroyed (be + past participle) by the dragon (agent).'"
+GrammarRule: "Active to Passive Transformation"
+
+---
+
+### ARCHETYPE 2: Identifying Active vs Passive ###
+Instruction for AI: Test ability to recognize whether a sentence from the comic is in active or passive voice.
+
+Example format:
+Question: "Look at this sentence from Panel 3: 'The treasure was hidden by ancient wizards.' Is this active or passive voice?"
+Options: ["Active voice", "Passive voice", "Neither", "Both"]
+Correct: 1
+Explanation: "This is passive voice. Signs: (1) Subject (treasure) receives the action rather than doing it. (2) 'Was hidden' uses 'be verb + past participle.' (3) Agent (wizards) comes after 'by.'"
+GrammarRule: "Recognizing Passive Voice"
+
+---
+
+### ARCHETYPE 3: When to Use Passive Voice ###
+Instruction for AI: Test understanding of when passive voice is more appropriate (unknown agent, focus on action/object, formal writing).
+
+Example format:
+Question: "The narration says, 'The castle was built in 1347.' Why is passive voice appropriate here?"
+ComicReference: "Panel 2: Ancient castle, no information about builders"
+Options: ["Because castles can't do actions", "Because we don't know or don't care who built it", "Because it's in the past", "Because castles are objects"]
+Correct: 1
+Explanation: "Passive voice is appropriate when the agent (who did the action) is unknown, unimportant, or obvious. We don't know who built the castle, and it doesn't matter to the story."
+GrammarRule: "Passive Voice - Unknown/Unimportant Agent"
+
+---
+
+### ARCHETYPE 4: Passive Voice in Different Tenses ###
+Instruction for AI: Test formation of passive voice in various tenses using the comic's context.
+
+Example format:
+Question: "How would you complete this sentence in passive voice, present continuous tense? 'Right now, the spell ___ by the wizard.'"
+ComicReference: "Panel 4: Wizard currently casting a spell"
+Options: ["is casting", "is being cast", "was being cast", "has been cast"]
+Correct: 1
+Explanation: "Passive present continuous: am/is/are + being + past participle. Active: 'The wizard is casting the spell.' Passive: 'The spell is being cast by the wizard.'"
+GrammarRule: "Passive Voice - Present Continuous Tense"
+
+---
+
+### ARCHETYPE 5: Agent Omission in Passive ###
+Instruction for AI: Test when it's appropriate to omit the agent (the 'by...' phrase) in passive voice.
+
+Example format:
+Question: "Which passive sentence is better? The narration describes general knowledge about diamonds."
+Options: ["Diamonds are formed deep underground by nature", "Diamonds are formed deep underground", "Diamonds are forming deep underground by people", "Diamonds were formed by miners"]
+Correct: 1
+Explanation: "When the agent is obvious, general, or unimportant, we can omit it. 'Diamonds are formed deep underground' is clearer than adding 'by nature' or 'by natural processes' because it's obvious."
+GrammarRule: "Passive Voice - Agent Omission"
+
+---
+
+### ARCHETYPE 6: Fixing Passive Voice Overuse ###
+Instruction for AI: Test recognition that active voice is sometimes clearer and more direct than passive.
+
+Example format:
+Question: "The dialogue says, 'The sword was wielded by the hero, and the enemy was defeated by him.' How can this be improved?"
+Options: ["Keep it as is - passive is always better", "Change to active: 'The hero wielded the sword and defeated the enemy'", "Change to: 'The sword wielded the hero'", "Add more passive verbs"]
+Correct: 1
+Explanation: "Active voice is often clearer and more direct: 'The hero wielded the sword and defeated the enemy.' Passive voice can make writing wordy and unclear if overused."
+GrammarRule: "Active Voice - Clarity and Directness"
+
+---
+
+### ARCHETYPE 7: Passive with Modal Verbs ###
+Instruction for AI: Test passive voice formation with modal verbs (can be, must be, should be, etc.).
+
+Example format:
+Question: "Complete this sentence in passive voice with a modal verb: 'The ancient scroll ___ with great care.'"
+ComicReference: "Panel 5: Delicate old scroll that requires careful handling"
+Options: ["must handle", "must be handled", "must be handling", "must have handle"]
+Correct: 1
+Explanation: "Passive voice with modal: modal + be + past participle. Active: 'Someone must handle the scroll carefully.' Passive: 'The scroll must be handled carefully.'"
+GrammarRule: "Passive Voice with Modals"
